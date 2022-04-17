@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <%- include("./partials/header.ejs") %>
+<body>
+    <%- include("./partials/navbar.ejs") %>
+    <div class="container">
+        <hr>
+        <div class="text-center mb-4">
+            <h1>GUIA DE PERGUNTAS</h1>
+        </div>
+        <hr>
+        <% perguntas_index.forEach(pergunta =>{ %> <!-- exibindo a listagem de perguntas enviadas pela rota "/"-->
+            <div class="card">
+                <div class="card-header">
+                    <h5>#<%= pergunta.id %></h5>
+                </div>
+                <div class="card-body">
+                    <h3><%= pergunta.titulo %></h3>
+                </div>
+                <div class="card-footer">
+                    <p><%= pergunta.descricao %></p>
+                </div>
+                <div class="card-footer">
+                    <a href="/pergunta/<%= pergunta.id %>" class="btn btn-dark">Responder</a>
+                </div>
+            </div>
+            <br>
+        <% }) %>
+        <div class="text-center mb-5">
+            <a href="/perguntar" class="btn btn-primary">Perguntar</a>
+        </div>
+    </div>
+</body>
+    <%- include("./partials/footer.ejs") %>
+</html>
