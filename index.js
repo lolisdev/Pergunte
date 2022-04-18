@@ -64,7 +64,7 @@ app.get("/perguntar", (req, res)=>{ // toda vez que a rota é acessada, o que ti
     if(logado){
             res.render("perguntar", ({user: user, rota: rota, botao: botao}));
         }else{
-            res.redirect("/login")
+            res.redirect("/login");
         }
 });
 
