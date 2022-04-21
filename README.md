@@ -9,6 +9,3 @@
 * Sequelize
 * Body-Parser
 * EJS.
-
-Parametrização para funcionamento:
-* Preencher database.js com a senha do banco de dados.
